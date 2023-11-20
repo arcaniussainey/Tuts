@@ -54,6 +54,7 @@ What's important to note is that these "functional requirements" are actually ju
 - Print Standard Deviation (population)
 - Print Letter Grade Data
 - Print Min & Max Scores
+- Save data to file
 
 Now that we've combined those requirements, they read significantly easier than reading the paragraph plus requirements. 
 
@@ -725,6 +726,6 @@ System.out.printf("Min Score: %d\n", min_score);
 
 ### Completion
 
-With everything outlined like that, the project is near complete! 
+With everything outlined like that, the project is near complete! All that's left is saving the data to a file. I leave this as a research activity to the reader~
 
 Hopefully that's at least somewhat helpful! Peace!!
