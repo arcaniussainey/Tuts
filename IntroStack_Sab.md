@@ -143,8 +143,59 @@ class Stack {
 
 Given the above, or using what you created, reproduce the following methods:
  - Stack
+   -   constructor function  
    -   public <type> pop
    -   public void push
 
 It should be noted that typically when popping from the stack, one returns the data in the object instead of the object itself. 
  
+```Java
+class StackObject {
+    private StackObject next; // ensures we're referring to another StackObject.
+    private Object data; // We want to store data in these objects, this let's us to that.
+                  // We could also use an int field, or a string, or something else.
+
+    StackObject(Object dataIn){
+        this.data = dataIn;
+    }
+
+    public void setNext(StackObject st_obj){
+        this.next = st_obj;
+    }
+
+    public Object getData(){
+        return this.data;
+    }
+}
+
+class Stack {
+    private StackObject topObj; // we only need to track the top object!
+
+    // We could also have optional length fields, ie: int length;
+    Stack() {
+        this.topObj = null;
+    }
+
+    public void push(Object data){
+        if (this.topObj == null){
+            this.topObj = new StackObject(data); // initialize the topObject
+        } else {
+            StackObject temp = this.topObj; // store a reference to the current top object
+            StackObject newTop = new StackObject(data);
+            newTop.setNext(temp);
+            this.topObj = newTop; // replace the top object
+        }
+    }
+
+    public Object pop() {
+        if (this.topObj == null)
+            return null;
+
+        Object top_data = this.topObj.getData();
+        this.topObj = this.topObj.next; // set to the next stackobject in line
+                // This works even if there's no next obj, because if there's no next, .next == null, so topObj will become null. 
+        return top_data; 
+    }
+}
+
+```
