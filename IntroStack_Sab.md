@@ -28,9 +28,13 @@ while (item != null){
 ```
 Outputs
 > 140
+
 > 9
+
 > 5
+
 > 11
+
 > 13
 
 You can see that usage was pretty straightforward there. The idea itself is relatively simple. Now think, how might we achieve that behavior? Attempt to solve this on your
@@ -141,5 +145,6 @@ Given the above, or using what you created, reproduce the following methods:
  - Stack
    -   public <type> pop
    -   public void push
+
 It should be noted that typically when popping from the stack, one returns the data in the object instead of the object itself. 
  
