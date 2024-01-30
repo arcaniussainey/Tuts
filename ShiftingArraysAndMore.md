@@ -54,11 +54,11 @@ So if we represent everything with numbers instead, our operation looks like thi
 
 ```mermaid
 stateDiagram-v2
-    1 --> [2]
-    2 --> [3]
-    3 --> [4]
-    4 --> [5]
-    5 --> [1]
+    1 --> TWO
+    2 --> THREE
+    3 --> FOUR
+    4 --> FIVE
+    5 --> ONE
 ```
 
 
