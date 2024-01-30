@@ -113,7 +113,7 @@ public string[] ShiftRight(string[] data)
  
     array[0] = lastElement;
 
-    return array
+    return array;
 }
 ```
 
@@ -137,6 +137,8 @@ public string[] reverse(string[] data)
         // We use <= to account for starting at i=1 instead of i=0
         array[i-1] = data[data.Length - i];
     }
+
+return array;
 }
 
 ```
